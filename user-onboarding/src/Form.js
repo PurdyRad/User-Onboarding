@@ -57,7 +57,7 @@ function Form(props) {
         <form className='form-container' onSubmit={onSubmit}>
             <div className='form-group submit'>
                 <StyledH2>Get in here</StyledH2>
-                <StyledButton disabled={disabled}>Finalize</StyledButton>
+                <StyledButton id='finalBtn' disabled={disabled}>Finalize</StyledButton>
                 <div className='errors'>
                     <div>{errors.name}</div>
                     <div>{errors.email}</div>
@@ -81,7 +81,7 @@ function Form(props) {
                     value={values.email} 
                     onChange={onChange} 
                     name='email' 
-                    type='text'
+                    type='email'
                     />
                 </label>
                 <label>Make this password eXtra secure
@@ -89,7 +89,7 @@ function Form(props) {
                     value={values.password} 
                     onChange={onChange} 
                     name='password' 
-                    type='text'
+                    type='password'
                     />
                 </label>
                 <label>Do you 'eggcept' to all the Terms and Conditions 😈 
